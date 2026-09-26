@@ -11,6 +11,13 @@ public class Bill {
 		
 	}
 	
+	public Bill(String appointmentNumber, double consultationFee, double treatmentCost) {
+	    this.appointmentNumber = appointmentNumber;
+	    this.consultationFee   = consultationFee;
+	    this.treatmentCost     = treatmentCost;
+	    this.totalAmount       = consultationFee + treatmentCost;
+	}
+	
 	public Bill(int id, String appointmentNumber, double consultationFee, double treatmentCost, double totalAmount) {
 		this.id = id;
 		this.appointmentNumber = appointmentNumber;

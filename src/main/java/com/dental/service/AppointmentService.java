@@ -50,6 +50,10 @@ public class AppointmentService {
 		return appointmentDAO.getAppointmentByDate(fromDate, toDate);
 	}
 	
+	public List<Appointment> getAllAppointments() throws SQLException {
+        return appointmentDAO.getAllAppointments();
+    }
+	
 	public boolean updateAppointment(Appointment appointment) throws SQLException {
 		if(!appointmentDAO.existingAppointment(appointment.getAppointmentNumber())) {
 			throw new IllegalArgumentException("Appointment not found!");
